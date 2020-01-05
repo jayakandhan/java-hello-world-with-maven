@@ -2,7 +2,6 @@
 def appName= 'testing'
 def major_version = 1.0
 def buildnumber=BUILD_NUMBER
-
 node{ 
   stage('cloning repo'){
   checkout scm
