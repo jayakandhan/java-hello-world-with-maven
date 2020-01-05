@@ -1,7 +1,6 @@
 #!/usr/bin/env groovy
 def appName= 'testing'
 def major_version = 1.0 
-def build_number =  BUILD_NUMBER
 
 
 node{ 
@@ -20,10 +19,11 @@ sh 'mvn clean install'
 }
   
   stage('renaming jar'){
-    def version =appName + '-' + major_version + '.' + build_number
-    sh 'mv $WORKSPACE/target/jb*.jar $WORKSPACE/target/${version}.jar'
-    sh 'ls -la $WORKSPACE/target'
-    echo "The current app Name is ${version}"
+    def build_number =  BUILD_NUMBER
+    def appVersion = major_version + build_number
+    sh 'mv /var/lib/jenkins/workspace/TEST_PIPE/target/jb*.jar /var/lib/jenkins/workspace/TEST_PIPE/target/"${appName}"."${appVersion}".jar'
+    echo "The current application name is ${appName}.${appVersion}.jar"
+    sh 'ls -la target/'
   }
   
 }
