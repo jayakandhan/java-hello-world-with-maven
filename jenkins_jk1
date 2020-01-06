@@ -5,6 +5,7 @@ node{
   stage('cloning repo')
   {
     checkout scm
+    sh 'ls -la'
   }
   stage('Testing')
   {
