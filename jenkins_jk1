@@ -1,16 +1,16 @@
 #!/usr/bin/env groovy
 def appName= 'testing'
 def major_version = 1.0
-node{ 
+node{
   stage('cloning repo')
   {
-  checkout scm
-}
+    checkout scm
+  }
   stage('Testing')
-{
-sh 'ls -la'
-sh 'mvn clean test'  
-}
+  {
+    sh 'ls -la'
+    sh 'mvn clean test'  
+  }
   stage('Building')
   {
     sh 'ls -lart'
