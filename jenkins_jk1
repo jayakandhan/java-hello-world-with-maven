@@ -1,4 +1,5 @@
 #!/usr/bin/env groovy
+#! Hi i am testing the GIT jenkins connection
 def appName= 'testing'
 def major_version = 1.0
 node{
