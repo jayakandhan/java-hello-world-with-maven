@@ -10,8 +10,8 @@ node{
   }
   stage('Testing')
   {
+    sh 'mvn clean test'
     sh 'ls -la'
-    sh 'mvn clean test'  
   }
   stage('Building')
   {
