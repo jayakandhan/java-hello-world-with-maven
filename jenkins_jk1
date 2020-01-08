@@ -18,7 +18,7 @@ node{
     sh 'ls -lart'
     sh 'mvn clean install'
   }
-  stage('App rename')
+  stage('App Rename')
   {
     def file_name=appName +  major_version +  buildnumber
     echo "Renaming the application jar file name"
