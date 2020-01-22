@@ -10,7 +10,7 @@ node{
   {
     sh 'mvn clean test'
   }
-  stage('Build the code')
+  stage('Build code')
   {
     sh 'mvn clean install'
   }
