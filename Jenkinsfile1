@@ -6,7 +6,7 @@ node{
   {
     checkout scm
   }
-  stage('Testing Build')
+  stage('Testing')
   {
     sh 'mvn clean test'
   }
