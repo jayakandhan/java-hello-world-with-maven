@@ -18,7 +18,7 @@ echo "Building app with name ${appName}"
 sh 'mvn clean install'
 }
   
-  stage('renaming jar'){
+  stage('renaming jar and version'){
     def build_number =  BUILD_NUMBER
     def appVersion = major_version + build_number
     sh "mv $WORKSPACE/target/jb*.jar $WORKSPACE/target/${appName}.${appVersion}.jar"
