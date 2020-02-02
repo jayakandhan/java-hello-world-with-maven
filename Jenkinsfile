@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-def appName= 'app testing'
+def appName= 'app_testing'
 def major_version = 1.0 
 
 
